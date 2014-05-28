@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>March Madness Bracket Competition Installation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta name="author" content="Matt Felser, Brian Battaglia, John Holder, Robert Jailall" />
+	<style type="text/css" media="all">@import "../images/style.css";</style>
+
+</head>
+<body>
+<script type="text/javascript">
+function copySeeds()
+{
+	for( var j=2; j<17;j++)
+	{
+		
+		for( var i=1; i<7; i++ )
+		{
+			var source = document.getElementsByName("1-" + i + "_scoring")[0];			
+			var target = document.getElementsByName(j + "-" + i + "_scoring")[0];
+			
+			target.value = source.value;
+		}
+	}
+}
+</script>
+<div class="content">
+	<div id="top">
+		<div class="rightlinks">| <a href="http://sourceforge.net/projects/tourney"><span class="info">Copyright &copy; 2007-2008 Matt Felser, Portions Copyright &copy; 2008-2009 Brian Battaglia, John Holder, Robert Jailall</span></a></div>
+	</div>
+		<div id="header">
+			
+			<div class="info">
+				<h1>March Madness Bracket Competition</h1>
+				<h2>Set Up Your New Site</h2>
+			</div>
+		</div>
+	
+		<div id="subheader">
+			<div id="menu">
+			  	<ul>
+					<li><a href="../index.php">HOME</a></li>
+					<li><a href="../submit.php">SUBMIT</a></li>
+					<li><a href="../rules.php">RULES</a></li>
+					<li><a href="../standings.php">STANDINGS</a></li>
+					<li><a href="../admin/">ADMIN AREA</a></li>
+      			</ul>
+			</div>
+		</div>
+	<div id="main">
+		<div class="full">
+			<ol>
+				<li>Rename admin/database.php.tmpl to admin/database.php</li>
+				<li>Edit database.php to include the proper database configuration</li>
+				<li>Fill out the form below and click finish! You are done!</li>
+			</ol>
+			<form method="post" action="install.php">
+			<table border="1" cellpadding="3">
+				<tr>
+					<td>Site Title</td>
+					<td><input type="text" name="title" /></td>
+				</tr>
+				<tr>
+					<td>Site Subtitle</td>
+					<td><input type="text" name="subtitle" /></td>
+				</tr>
+				<tr>
+					<td>Administrator Name</td>
+					<td><input type="text" name="adminname" /></td>
+				</tr>
+				<tr>
+					<td>Administrator Password</td>
+					<td><input type="password" name="password" /></td>
+				</tr>
+				<tr>
+					<td>Administrator Email</td>
+					<td><input type="text" name="email" /></td>
+				</tr>
+				<tr>
+					<td>Entry Fee (in $)</td>
+					<td><input type="text" name="cost" /></td>
+				</tr>
+				<tr>
+					<td>Cut Type</td>
+					<td>
+						<input type="radio" name="cutType" value="1">
+						In Percent
+						<input type="radio" name="cutType" value="0">
+						In Dollars
+					</td>
+				</tr>
+				<tr>
+					<td>Cut Amount (in $ or %)</td>
+					<td><input type="text" name="cut" /></td>
+				</tr>
+				<tr>
+					<td>Sweet 16 Tournament? (Must fill in first 2 rounds in master bracket)</td>
+					<td><input type="checkbox" name="sweet16Competition" /></td>
+				</tr>
+				<tr>
+					<td>Region 1 Name (plays Region 2)</td>
+					<td><input type="text" name="region1name" /></td>
+				</tr>
+				<tr>
+					<td>Region 2 Name (plays Region 1)</td>
+					<td><input type="text" name="region2name" /></td>
+				</tr>
+					<td>Region 3 Name (plays Region 4)</td>
+					<td><input type="text" name="region3name" /></td>
+				</tr>
+				<tr>
+					<td>Region 4 Name (plays Region 3)</td>
+					<td><input type="text" name="region4name" /></td>
+				</tr>
+
+				<tr>
+					<td>Scoring</td>
+					<td>
+						<a href="javascript:copySeeds()">Copy first row to all seeds</a>
+						<table>
+							<tr align="center">
+								<td>Seed</td>
+								<td>R1</td>
+								<td>R2</td>
+								<td>R3</td>
+								<td>R4</td>
+								<td>R5</td>
+								<td>R6</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td><input type="text" name="1-1_scoring" size="3"/></td>
+								<td><input type="text" name="1-2_scoring" size="3"/></td>
+								<td><input type="text" name="1-3_scoring" size="3"/></td>
+								<td><input type="text" name="1-4_scoring" size="3"/></td>
+								<td><input type="text" name="1-5_scoring" size="3"/></td>
+								<td><input type="text" name="1-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><input type="text" name="2-1_scoring" size="3"/></td>
+								<td><input type="text" name="2-2_scoring" size="3"/></td>
+								<td><input type="text" name="2-3_scoring" size="3"/></td>
+								<td><input type="text" name="2-4_scoring" size="3"/></td>
+								<td><input type="text" name="2-5_scoring" size="3"/></td>
+								<td><input type="text" name="2-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><input type="text" name="3-1_scoring" size="3"/></td>
+								<td><input type="text" name="3-2_scoring" size="3"/></td>
+								<td><input type="text" name="3-3_scoring" size="3"/></td>
+								<td><input type="text" name="3-4_scoring" size="3"/></td>
+								<td><input type="text" name="3-5_scoring" size="3"/></td>
+								<td><input type="text" name="3-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><input type="text" name="4-1_scoring" size="3"/></td>
+								<td><input type="text" name="4-2_scoring" size="3"/></td>
+								<td><input type="text" name="4-3_scoring" size="3"/></td>
+								<td><input type="text" name="4-4_scoring" size="3"/></td>
+								<td><input type="text" name="4-5_scoring" size="3"/></td>
+								<td><input type="text" name="4-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><input type="text" name="5-1_scoring" size="3"/></td>
+								<td><input type="text" name="5-2_scoring" size="3"/></td>
+								<td><input type="text" name="5-3_scoring" size="3"/></td>
+								<td><input type="text" name="5-4_scoring" size="3"/></td>
+								<td><input type="text" name="5-5_scoring" size="3"/></td>
+								<td><input type="text" name="5-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><input type="text" name="6-1_scoring" size="3"/></td>
+								<td><input type="text" name="6-2_scoring" size="3"/></td>
+								<td><input type="text" name="6-3_scoring" size="3"/></td>
+								<td><input type="text" name="6-4_scoring" size="3"/></td>
+								<td><input type="text" name="6-5_scoring" size="3"/></td>
+								<td><input type="text" name="6-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><input type="text" name="7-1_scoring" size="3"/></td>
+								<td><input type="text" name="7-2_scoring" size="3"/></td>
+								<td><input type="text" name="7-3_scoring" size="3"/></td>
+								<td><input type="text" name="7-4_scoring" size="3"/></td>
+								<td><input type="text" name="7-5_scoring" size="3"/></td>
+								<td><input type="text" name="7-6_scoring" size="3"/></td>
+							</tr>
+								<tr>
+								<td>8</td>
+								<td><input type="text" name="8-1_scoring" size="3"/></td>
+								<td><input type="text" name="8-2_scoring" size="3"/></td>
+								<td><input type="text" name="8-3_scoring" size="3"/></td>
+								<td><input type="text" name="8-4_scoring" size="3"/></td>
+								<td><input type="text" name="8-5_scoring" size="3"/></td>
+								<td><input type="text" name="8-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><input type="text" name="9-1_scoring" size="3"/></td>
+								<td><input type="text" name="9-2_scoring" size="3"/></td>
+								<td><input type="text" name="9-3_scoring" size="3"/></td>
+								<td><input type="text" name="9-4_scoring" size="3"/></td>
+								<td><input type="text" name="9-5_scoring" size="3"/></td>
+								<td><input type="text" name="9-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><input type="text" name="10-1_scoring" size="3"/></td>
+								<td><input type="text" name="10-2_scoring" size="3"/></td>
+								<td><input type="text" name="10-3_scoring" size="3"/></td>
+								<td><input type="text" name="10-4_scoring" size="3"/></td>
+								<td><input type="text" name="10-5_scoring" size="3"/></td>
+								<td><input type="text" name="10-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td><input type="text" name="11-1_scoring" size="3"/></td>
+								<td><input type="text" name="11-2_scoring" size="3"/></td>
+								<td><input type="text" name="11-3_scoring" size="3"/></td>
+								<td><input type="text" name="11-4_scoring" size="3"/></td>
+								<td><input type="text" name="11-5_scoring" size="3"/></td>
+								<td><input type="text" name="11-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td><input type="text" name="12-1_scoring" size="3"/></td>
+								<td><input type="text" name="12-2_scoring" size="3"/></td>
+								<td><input type="text" name="12-3_scoring" size="3"/></td>
+								<td><input type="text" name="12-4_scoring" size="3"/></td>
+								<td><input type="text" name="12-5_scoring" size="3"/></td>
+								<td><input type="text" name="12-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td><input type="text" name="13-1_scoring" size="3"/></td>
+								<td><input type="text" name="13-2_scoring" size="3"/></td>
+								<td><input type="text" name="13-3_scoring" size="3"/></td>
+								<td><input type="text" name="13-4_scoring" size="3"/></td>
+								<td><input type="text" name="13-5_scoring" size="3"/></td>
+								<td><input type="text" name="13-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>14</td>
+								<td><input type="text" name="14-1_scoring" size="3"/></td>
+								<td><input type="text" name="14-2_scoring" size="3"/></td>
+								<td><input type="text" name="14-3_scoring" size="3"/></td>
+								<td><input type="text" name="14-4_scoring" size="3"/></td>
+								<td><input type="text" name="14-5_scoring" size="3"/></td>
+								<td><input type="text" name="14-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td><input type="text" name="15-1_scoring" size="3"/></td>
+								<td><input type="text" name="15-2_scoring" size="3"/></td>
+								<td><input type="text" name="15-3_scoring" size="3"/></td>
+								<td><input type="text" name="15-4_scoring" size="3"/></td>
+								<td><input type="text" name="15-5_scoring" size="3"/></td>
+								<td><input type="text" name="15-6_scoring" size="3"/></td>
+							</tr>
+							<tr>
+								<td>16</td>
+								<td><input type="text" name="16-1_scoring" size="3"/></td>
+								<td><input type="text" name="16-2_scoring" size="3"/></td>
+								<td><input type="text" name="16-3_scoring" size="3"/></td>
+								<td><input type="text" name="16-4_scoring" size="3"/></td>
+								<td><input type="text" name="16-5_scoring" size="3"/></td>
+								<td><input type="text" name="16-6_scoring" size="3"/></td>
+							</tr>
+
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>Do you want notification emails sent to yourself and entrants?<br />
+						(Uncheck if you have no mailserver)</td>
+					<td><input type="checkbox" name="mail" checked /></td>
+				</tr>
+				<tr>
+					<td>Installing database for this version(1.5.1). Overwrite any existing database?
+						<br>(If NOT checked, will attempt to migrate old data.)
+						<br>
+						<br>
+						BACKUP ANY EXISTING DATA BEFORE YOU INSTALL THIS.			
+					</td>
+					<td><input type="checkbox" name="overwrite_db"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Finish!"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+</div>
+</body>
+</html>

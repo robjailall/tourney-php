@@ -1,0 +1,100 @@
+/* Styles for the Printable Bracket */
+
+@page land {size: landscape;}
+
+.content
+{
+	page: land;
+}
+
+.strike {
+	text-decoration:line-through;
+	color: #FF0000;
+}
+
+.correction {
+	font-style: italic;
+	color: #000000;
+	font-weight: bold;
+}
+
+.right {
+	color:#006611;
+	font-weight: 800;
+}
+
+
+table {
+	border-collapse: collapse;
+	border: 1;
+	font: 12px arial, helvetica, sans-serif;
+}
+
+td {
+	vertical-align: middle;
+	width: 10em;
+	height: 100%;
+	padding: 2px;
+}
+
+#champ {
+	font-size: 25px;
+	text-align:center;
+}
+
+#leftChamp {
+	font-size: 15px;
+	vertical-align: bottom;
+	text-align: left;
+}
+
+#rightChamp {
+	font-size: 15px;
+	vertical-align: top;
+	text-align: right;
+}
+
+#title {
+	font-size:20px;
+	text-align:center;
+}
+
+#top
+{
+	display: none;
+}
+
+#header
+{
+	display: none;
+}
+
+#subheader
+{
+	display: none;
+}
+
+#printlink
+{
+	display: none;
+}
+
+#mybracketnav
+{
+    display: none;
+}
+
+#main .bracket {
+color: #000000;
+}
+
+#smacktalk
+{
+	display: none;
+}
+
+#addcomment
+{
+	display: none;
+}
+
